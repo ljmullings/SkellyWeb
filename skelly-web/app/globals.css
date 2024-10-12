@@ -27,7 +27,7 @@ input, textarea {
 }
 
 p {
-  @apply text-gray-700 leading-relaxed;
+  @apply text-gray-300 leading-relaxed;
 }
 
 .container {
@@ -38,6 +38,6 @@ footer {
   @apply bg-muted text-white py-4 text-center;
 }
 
-.widget {
+/* .widget {
   @apply bg-white text-gray-700 rounded-lg shadow-lg p-6 hover:bg-secondary hover:text-gray-900 transition-all duration-300;
-}
+} */
