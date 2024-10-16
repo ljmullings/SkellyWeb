@@ -2,15 +2,15 @@
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 export default function Home() {
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && videoRef.current) { // Add null check
           videoRef.current.play();
-        } else {
+        } else if (videoRef.current) { // Add null check
           videoRef.current.pause();
         }
       },
